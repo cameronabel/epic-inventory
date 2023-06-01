@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "./Header";
-import ProductList from "./ProductList";
+import ProductControl from "./ProductControl";
 
-function App(){
+
+export default function App(){
   return (
     <>
       <Header />
-      <ProductList />
+      <ProductControl />
+      <hr />
     </>
   );
 }
-
-export default App;
