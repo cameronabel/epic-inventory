@@ -1,6 +1,5 @@
 import React from "react";
 import ProductList from "./ProductList";
-import { v4 } from 'uuid';
 
 
 export default class ProductControl extends React.Component {
@@ -16,7 +15,6 @@ export default class ProductControl extends React.Component {
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-    let addProductButton = null;
 
     switch(this.state.stateName){
       case 'list':
@@ -36,7 +34,7 @@ export default class ProductControl extends React.Component {
     return (
       <>
         {currentlyVisibleState}
-        <button>{buttonText}</button>
+        <button class="btn addNewProduct">{buttonText}</button>
       </>
     )
   }
