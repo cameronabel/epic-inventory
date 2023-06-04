@@ -15,6 +15,7 @@ export default function Product(props){
     color = "#FF002890";
     level = 0.1
   }
+  let sellDisabled = props.qty === 0;
 
   return (
     <>
@@ -25,7 +26,7 @@ export default function Product(props){
           <p>{props.abv}%</p>
         </div>
         <div class="sell-container">
-          <button onClick={() => props.whenSellButtonClicked(props.id)}class="btn sell">Sell</button>
+          <button onClick={() => props.whenSellButtonClicked(props.id)} class="sell" disabled={sellDisabled}>Sell</button>
         </div>
         <div class="keg-container">
           

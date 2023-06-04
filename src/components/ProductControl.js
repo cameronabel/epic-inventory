@@ -83,7 +83,7 @@ export default class ProductControl extends React.Component {
 
   handleDecrementingProductQuantity = (id) => {
     let productToDecrement = this.state.mainProductList.filter(product => product.id === id)[0];
-    productToDecrement.qty -= 1;
+    productToDecrement.qty = Math.max(productToDecrement.qty - 1, 0);
     this.forceUpdate();
   }
 
