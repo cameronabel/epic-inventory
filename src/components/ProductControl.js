@@ -138,7 +138,31 @@ let sampleProductArray = [
     name: "2019 Three Otters Rose",
     shortDescription: "Pinot Rose",
     abv: 13.5,
-    qty: 100,
+    qty: 30,
+    id: v4()
+  },
+  {
+    vendor: "Lagunitas",
+    name: "Willettized",
+    shortDescription: "Imperial Coffee Stout - Barrel Aged",
+    abv: 13.1,
+    qty: 40,
+    id: v4()
+  },
+  {
+    vendor: "Deschutes",
+    name: "'19 The Abyss",
+    shortDescription: "Imperial Stout - Barrel Aged",
+    abv: 11.2,
+    qty: 20,
+    id: v4()
+  },
+  {
+    vendor: "Hen House",
+    name: "Oyster Stout",
+    shortDescription: "Stout w/ Oysters & Sea Salt",
+    abv: 4.9,
+    qty: 110,
     id: v4()
   }
 ]
