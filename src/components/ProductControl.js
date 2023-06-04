@@ -2,6 +2,7 @@ import React from "react";
 import ProductList from "./ProductList";
 import NewProductForm from "./NewProductForm";
 import ProductDetail from "./ProductDetail";
+import EditProductForm from "./EditProductForm";
 
 
 export default class ProductControl extends React.Component {
@@ -55,6 +56,20 @@ export default class ProductControl extends React.Component {
     });
   }
 
+  handleEditClick = () => {
+    this.setState({stateName: 'edit'});
+  }
+
+  handleEditingProduct = (productToEdit) => {
+    const editedMainProductList = this.mainProductList
+      .filter(product => product.id !== this.state.selectedProduct.id)
+      .concat(productToEdit);
+    this.setState({
+      mainProductList: editedMainProductList,
+      stateName: 'list'
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -78,9 +93,16 @@ export default class ProductControl extends React.Component {
           onClickingEdit={this.handleEditClick} />
         buttonText="Back"
         break;
+      case 'edit':
+        currentlyVisibleState = <EditProductForm
+          product={this.state.selectedProduct}
+          onClickingEdit={this.handleEditingProduct} />
+        buttonText="Back"
+        break;
       default:
         currentlyVisibleState = <ProductList
           productList={this.state.mainProductList}
+          onProductSelection={this.handleChangingSelectedProduct}
         />
         buttonText="Add Product"
         break
