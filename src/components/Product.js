@@ -26,7 +26,7 @@ export default function Product(props){
           <p>{props.abv}%</p>
         </div>
         <div class="sell-container">
-          <button onClick={() => props.whenSellButtonClicked(props.id)} class="sell" disabled={sellDisabled}>Sell</button>
+          <button onClick={() => props.whenSellButtonClicked(props.id)} class="btn sell" disabled={sellDisabled}>Sell</button>
         </div>
         <div class="keg-container">
           

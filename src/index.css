@@ -115,3 +115,11 @@ nav {
 .sell {
   margin-top: 35px;
 }
+
+.sell:disabled {
+  background: #222222
+}
+
+.sell:disabled:hover {
+  cursor: default;
+}
