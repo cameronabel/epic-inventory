@@ -5,9 +5,11 @@ import PropTypes from "prop-types";
 export default function Product(props){
   return (
     <>
-      <h3>{props.name} - {props.vendor}</h3>
-      <p>{props.shortDescription}</p>
-      <hr />
+      <div onClick={() => props.whenProductClicked(props.id)}>
+        <h3>{props.name} - {props.vendor}</h3>
+        <p>{props.shortDescription}</p>
+        <hr />
+      </div>
     </>
   );
 }
@@ -15,5 +17,7 @@ export default function Product(props){
 Product.propTypes = {
   name: PropTypes.string.isRequired,
   vendor: PropTypes.string.isRequired,
-  shortDescription: PropTypes.string.isRequired
+  shortDescription: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  whenProductClicked: PropTypes.func
 };

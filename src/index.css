@@ -78,3 +78,8 @@ nav {
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.btn:hover {
+  cursor: pointer;
+  background: #7180AC;
+}

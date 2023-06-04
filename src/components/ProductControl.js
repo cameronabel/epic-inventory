@@ -1,6 +1,7 @@
 import React from "react";
 import ProductList from "./ProductList";
 import NewProductForm from "./NewProductForm";
+import ProductDetail from "./ProductDetail";
 
 
 export default class ProductControl extends React.Component {
@@ -46,6 +47,14 @@ export default class ProductControl extends React.Component {
     }));
   }
 
+  handleChangingSelectedProduct = (id) => {
+    const selectedProduct = this.state.mainProductList.filter(product => product.id === id)[0];
+    this.setState({
+      selectedProduct: selectedProduct,
+      stateName: 'details'
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -54,12 +63,20 @@ export default class ProductControl extends React.Component {
       case 'list':
         currentlyVisibleState = <ProductList
           productList={this.state.mainProductList}
+          onProductSelection={this.handleChangingSelectedProduct}
         />
         buttonText="Add Product"
         break
       case 'create':
         currentlyVisibleState = <NewProductForm onNewProductCreation={this.handleAddingProductToList} />
         buttonText="Back";
+        break;
+      case 'details':
+        currentlyVisibleState = <ProductDetail
+          product={this.state.selectedProduct}
+          onClickingDelete={this.handleDeletingProduct}
+          onClickingEdit={this.handleEditClick} />
+        buttonText="Back"
         break;
       default:
         currentlyVisibleState = <ProductList
