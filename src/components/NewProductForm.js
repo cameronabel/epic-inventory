@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
+import ReusableForm from "./ReusableForm";
 
 export default function NewProductForm(props){
   function handleNewProductFormSubmission(e){
@@ -15,25 +16,9 @@ export default function NewProductForm(props){
 
   return (
     <>
-      <form class="page" onSubmit={handleNewProductFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Product Name'
-          required />
-        <br />
-        <input
-          type='text'
-          name='vendor'
-          placeholder='Vendor'
-          required />
-        <br />
-        <textarea
-          name='shortDescription'
-          placeholder="Product Description"
-          required />
-        <button class="btn addNewProduct" type="submit">Submit</button>
-      </form>
+      <ReusableForm 
+        formSubmissionHandler={handleNewProductFormSubmission}
+        buttonText="Submit" />
     </>
   );
 }

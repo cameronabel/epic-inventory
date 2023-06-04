@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export default function Product(props){
   return (
     <>
-      <div onClick={() => props.whenProductClicked(props.id)}>
+      <div class="product" onClick={() => props.whenProductClicked(props.id)}>
         <h3>{props.name} - {props.vendor}</h3>
         <p>{props.shortDescription}</p>
         <hr />

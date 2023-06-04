@@ -83,3 +83,8 @@ nav {
   cursor: pointer;
   background: #7180AC;
 }
+
+.product:hover {
+  cursor: pointer;
+  background: #dddddd;
+}
