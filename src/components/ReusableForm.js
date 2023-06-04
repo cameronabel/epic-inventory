@@ -8,14 +8,26 @@ export default function ReusableForm(props){
       <form class="page" onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
+          name='vendor'
+          placeholder='Vendor'
+          required />
+        <br />
+        <input
+          type='text'
           name='name'
           placeholder='Product Name'
           required />
         <br />
         <input
-          type='text'
-          name='vendor'
-          placeholder='Vendor'
+          type='number'
+          name='abv'
+          placeholder="ABV %"
+          required />
+        <br />
+        <input
+          type='number'
+          name='qty'
+          placeholder='Servings'
           required />
         <br />
         <textarea

@@ -1,4 +1,6 @@
 import React from "react";
+import { v4 } from 'uuid';
+
 import ProductList from "./ProductList";
 import NewProductForm from "./NewProductForm";
 import ProductDetail from "./ProductDetail";
@@ -10,7 +12,7 @@ export default class ProductControl extends React.Component {
     super(props);
     this.state = {
       stateName: 'list',
-      mainProductList: [],
+      mainProductList: sampleProductArray,
       selectedProduct: null
     };
   }
@@ -79,6 +81,10 @@ export default class ProductControl extends React.Component {
     });
   }
 
+  handleDecrementingProductQuantity = (productToDecrement) => {
+    productToDecrement.qty -= 1;
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -125,3 +131,14 @@ export default class ProductControl extends React.Component {
     )
   }
 }
+
+let sampleProductArray = [
+  {
+    vendor: "Fullerton",
+    name: "2019 Three Otters Rose",
+    shortDescription: "Pinot Rose",
+    abv: 13.5,
+    qty: 100,
+    id: v4()
+  }
+]

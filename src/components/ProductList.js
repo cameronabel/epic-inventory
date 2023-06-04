@@ -11,9 +11,11 @@ export default function ProductList(props){
         {props.productList.map((product) =>
           <Product
             whenProductClicked={props.onProductSelection}
-            name={product.name}
             vendor={product.vendor}
+            name={product.name}
             shortDescription={product.shortDescription}
+            abv={product.abv}
+            qty={product.qty}
             id={product.id}
             key={product.id}
           />
