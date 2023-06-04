@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/epic-inventory/static/css/main.aae4fb75.css",
+    "main.js": "/epic-inventory/static/js/main.608ab2ad.js",
+    "index.html": "/epic-inventory/index.html",
+    "main.aae4fb75.css.map": "/epic-inventory/static/css/main.aae4fb75.css.map",
+    "main.608ab2ad.js.map": "/epic-inventory/static/js/main.608ab2ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aae4fb75.css",
+    "static/js/main.608ab2ad.js"
+  ]
+}
