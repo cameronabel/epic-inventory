@@ -70,6 +70,15 @@ export default class ProductControl extends React.Component {
     });
   }
 
+  handleDeletingProduct = (id) => {
+    const newMainProductList = this.state.mainProductList.filter(product => product.id !== id);
+    this.setState({
+      stateName: 'list',
+      mainProductList: newMainProductList,
+      selectedProduct: null
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
