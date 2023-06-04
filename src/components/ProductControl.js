@@ -1,5 +1,6 @@
 import React from "react";
 import ProductList from "./ProductList";
+import NewProductForm from "./NewProductForm";
 
 
 export default class ProductControl extends React.Component {
@@ -23,6 +24,10 @@ export default class ProductControl extends React.Component {
         />
         buttonText="Add Product"
         break
+      case 'create':
+        currentlyVisibleState = <NewProductForm onNewProductCreation={this.handleAddingProductToList} />
+        buttonText="Back";
+        break;
       default:
         currentlyVisibleState = <ProductList
           productList={this.state.mainProductList}
