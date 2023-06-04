@@ -13,6 +13,39 @@ export default class ProductControl extends React.Component {
     };
   }
 
+  handleClick = () => {
+    let nextState = null;
+    let nextSelectedProduct = this.state.selectedProduct;
+    switch(this.state.stateName){
+      case 'productDetail':
+        nextState = 'list';
+        nextSelectedProduct = null;
+        break;
+      case 'form':
+        nextState = 'list';
+        nextSelectedProduct = null;
+        break;
+      case 'list':
+        nextState = 'create';
+        break;
+      default:
+        nextState = 'list';
+        break;
+    }
+    this.setState(() => ({
+      stateName: nextState,
+      selectedProduct: nextSelectedProduct
+    }));
+  }
+
+  handleAddingProductToList = (newProduct) => {
+    const newMainProductList = this.state.mainProductList.concat(newProduct);
+    this.setState(() => ({
+      mainProductList: newMainProductList,
+      stateName: 'list'
+    }));
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -39,7 +72,7 @@ export default class ProductControl extends React.Component {
     return (
       <>
         {currentlyVisibleState}
-        <button class="btn addNewProduct">{buttonText}</button>
+        <button class="btn addNewProduct" onClick={this.handleClick}>{buttonText}</button>
       </>
     )
   }

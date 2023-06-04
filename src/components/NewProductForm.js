@@ -15,18 +15,23 @@ export default function NewProductForm(props){
 
   return (
     <>
-      <form onSubmit={handleNewProductFormSubmission}>
+      <form class="page" onSubmit={handleNewProductFormSubmission}>
         <input
           type='text'
           name='name'
-          placeholder='Product Name' />
+          placeholder='Product Name'
+          required />
+        <br />
         <input
           type='text'
           name='vendor'
-          placeholder='Vendor' />
+          placeholder='Vendor'
+          required />
+        <br />
         <textarea
           name='shortDescription'
-          placeholder="Product Description" />
+          placeholder="Product Description"
+          required />
         <button class="btn addNewProduct" type="submit">Submit</button>
       </form>
     </>
