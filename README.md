@@ -16,7 +16,7 @@ _Toy application to demonstrate CRUD management with React._
 
 ## Component Diagram
 
-![component diagram]<blockquote class="imgur-embed-pub" lang="en" data-id="a/RTUhxzB" data-context="false" ><a href="//imgur.com/a/RTUhxzB"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![component diagram](https://i.imgur.com/SDP2J34.png)
 
 ## Setup/Installation Requirements
 
