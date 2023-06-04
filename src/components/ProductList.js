@@ -10,6 +10,7 @@ export default function ProductList(props){
         <hr />
         {props.productList.map((product) =>
           <Product
+            whenSellButtonClicked={props.whenSellButtonClicked}
             whenProductClicked={props.onProductSelection}
             vendor={product.vendor}
             name={product.name}
@@ -27,5 +28,6 @@ export default function ProductList(props){
 
 ProductList.propTypes = {
   productList: PropTypes.array,
-  onProductSelection: PropTypes.func
+  onProductSelection: PropTypes.func,
+  whenSellButtonClicked: PropTypes.func
 };

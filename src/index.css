@@ -84,7 +84,34 @@ nav {
   background: #7180AC;
 }
 
+.product {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
 .product:hover {
-  cursor: pointer;
   background: #dddddd;
+}
+
+.detail-container {
+  grid-area: 1 / 1 / 2 / 4;
+  cursor: pointer;
+}
+
+.sell-container {
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+.keg-container {
+  align-items: center;
+  text-align: center;
+  grid-area: 1 / 5 / 2 / 6;
+  position: relative;
+}
+
+.sell {
+  margin-top: 35px;
 }

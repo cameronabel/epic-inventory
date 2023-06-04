@@ -10,6 +10,7 @@ export default function NewProductForm(props){
       name: e.target.name.value,
       vendor: e.target.vendor.value,
       shortDescription: e.target.shortDescription.value,
+      abv: e.target.abv.value,
       id: v4()
     });
   }

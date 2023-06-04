@@ -10,6 +10,8 @@ export default function ProductDetail(props){
         <h1>Product Detail</h1>
         <h3>{product.name} - {product.vendor}</h3>
         <p><em>{product.shortDescription}</em></p>
+        <p>{product.abv}</p>
+        <p>Qty: {product.qty}</p>
         <button onClick={onClickingEdit}>Edit Product</button>
         <button onClick={() => onClickingDelete(product.id)}>Delete</button>
       </div>

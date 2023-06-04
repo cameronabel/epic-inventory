@@ -81,8 +81,10 @@ export default class ProductControl extends React.Component {
     });
   }
 
-  handleDecrementingProductQuantity = (productToDecrement) => {
+  handleDecrementingProductQuantity = (id) => {
+    let productToDecrement = this.state.mainProductList.filter(product => product.id === id)[0];
     productToDecrement.qty -= 1;
+    this.forceUpdate();
   }
 
   render(){
@@ -94,6 +96,7 @@ export default class ProductControl extends React.Component {
         currentlyVisibleState = <ProductList
           productList={this.state.mainProductList}
           onProductSelection={this.handleChangingSelectedProduct}
+          whenSellButtonClicked={this.handleDecrementingProductQuantity}
         />
         buttonText="Add Product"
         break
