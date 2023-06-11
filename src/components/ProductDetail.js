@@ -6,7 +6,7 @@ export default function ProductDetail(props){
 
   return (
     <>
-      <div class="page">
+      <div className="page">
         <h1>Product Detail</h1>
         <h3>{product.name} - {product.vendor}</h3>
         <p><em>{product.shortDescription}</em></p>

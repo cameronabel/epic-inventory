@@ -5,7 +5,7 @@ import "../Footer.css";
 export default function Footer(){
   return (
     <>
-      <p class="footer">Copyright © 2023 Cameron Abel</p>
+      <p className="footer">Copyright © 2023 Cameron Abel</p>
     </>
   );
 }

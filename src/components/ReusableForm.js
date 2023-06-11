@@ -5,7 +5,7 @@ export default function ReusableForm(props){
 
   return (
     <>
-      <form class="page" onSubmit={props.formSubmissionHandler}>
+      <form className="page" onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
           name='vendor'
@@ -34,7 +34,7 @@ export default function ReusableForm(props){
           name='shortDescription'
           placeholder="Product Description"
           required />
-        <button class="btn addNewProduct" type="submit">{props.buttonText}</button>
+        <button className="btn addNewProduct" type="submit">{props.buttonText}</button>
       </form>
     </>
   );

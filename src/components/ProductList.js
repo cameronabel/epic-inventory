@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export default function ProductList(props){
   return (
     <>
-      <div class="page">
+      <div className="page">
         <hr />
         {props.productList.map((product) =>
           <Product

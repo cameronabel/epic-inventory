@@ -10,8 +10,9 @@ export default function NewProductForm(props){
       name: e.target.name.value,
       vendor: e.target.vendor.value,
       shortDescription: e.target.shortDescription.value,
-      abv: e.target.abv.value,
-      id: v4()
+      abv: parseFloat(e.target.abv.value),
+      id: v4(),
+      qty: parseInt(e.target.qty.value, 10)
     });
   }
 
@@ -24,4 +25,6 @@ export default function NewProductForm(props){
   );
 }
 
-NewProductForm.propTypes = {onNewProductCreation: PropTypes.func};
+NewProductForm.propTypes = {
+  onNewProductCreation: PropTypes.func
+};

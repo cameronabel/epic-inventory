@@ -63,7 +63,7 @@ export default class ProductControl extends React.Component {
   }
 
   handleEditingProduct = (productToEdit) => {
-    const editedMainProductList = this.mainProductList
+    const editedMainProductList = this.state.mainProductList
       .filter(product => product.id !== this.state.selectedProduct.id)
       .concat(productToEdit);
     this.setState({
@@ -129,7 +129,7 @@ export default class ProductControl extends React.Component {
     return (
       <>
         {currentlyVisibleState}
-        <button class="btn addNewProduct" onClick={this.handleClick}>{buttonText}</button>
+        <button className="btn addNewProduct" onClick={this.handleClick}>{buttonText}</button>
       </>
     )
   }
